@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <!-- invisible element that marks the center of the screen -->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="554dp"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/centerShim">
+
+        <View
+            android:id="@+id/leftCenterShim"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView android:id="@+id/panel1"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel1_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel1"
+            android:layout_alignTop="@id/panel1"
+            android:layout_alignRight="@id/panel1"
+            android:src="@drawable/beer"/>
+
+        <Button android:id="@+id/panel1_text"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel1_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel1_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink1"/>
+
+        <TextView android:id="@+id/panel1_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/leftCenterShim"
+            android:layout_below="@id/panel1_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel1_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel1_quantity_metric"
+            android:layout_below="@id/panel1_text"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:text="@string/panel1_default_quantity"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel1_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/leftCenterShim"
+            android:layout_below="@id/panel1_text"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:text="@string/panel1_default_alcohol"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel1_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel1_alcohol"
+            android:layout_below="@id/panel1_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <ImageView android:id="@+id/panel3"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:layout_below="@id/panel1"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel3_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel3"
+            android:layout_alignTop="@id/panel3"
+            android:layout_alignRight="@id/panel3"
+            android:src="@drawable/vodka"/>
+
+        <Button android:id="@+id/panel3_text"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel3_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel3_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink3"/>
+
+        <TextView android:id="@+id/panel3_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/leftCenterShim"
+            android:layout_below="@id/panel3_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel3_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel3_quantity_metric"
+            android:layout_below="@id/panel3_text"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:text="@string/panel3_default_quantity"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel3_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/leftCenterShim"
+            android:layout_below="@id/panel3_text"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:text="@string/panel3_default_alcohol"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel3_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel3_alcohol"
+            android:layout_below="@id/panel3_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <ImageView android:id="@+id/panel5"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:layout_below="@id/panel3"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel5_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel5"
+            android:layout_alignTop="@id/panel5"
+            android:layout_alignRight="@id/panel5"
+            android:src="@drawable/mona"/>
+
+        <Button android:id="@+id/panel5_text"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel5_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel5_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink5"/>
+
+        <TextView android:id="@+id/panel5_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/leftCenterShim"
+            android:layout_below="@id/panel5_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel5_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel5_quantity_metric"
+            android:layout_below="@id/panel5_text"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:text="@string/panel5_default_quantity"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel5_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/leftCenterShim"
+            android:layout_below="@id/panel5_text"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:text="@string/panel5_default_alcohol"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel5_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel5_alcohol"
+            android:layout_below="@id/panel5_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/panel5">
+
+            <ImageButton android:id="@+id/settings_from_add_drink"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/settings"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/centerShim">
+
+        <View
+            android:id="@+id/rightCenterShim"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView android:id="@+id/panel2"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel2_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel2"
+            android:layout_alignTop="@id/panel2"
+            android:layout_alignRight="@id/panel2"
+            android:src="@drawable/wine"/>
+
+        <Button android:id="@+id/panel2_text"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel2_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel2_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink2"/>
+
+        <TextView android:id="@+id/panel2_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/rightCenterShim"
+            android:layout_below="@id/panel2_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel2_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel2_quantity_metric"
+            android:layout_below="@id/panel2_text"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:text="@string/panel2_default_quantity"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel2_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/rightCenterShim"
+            android:layout_below="@id/panel2_text"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:text="@string/panel2_default_alcohol"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel2_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel2_alcohol"
+            android:layout_below="@id/panel2_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <ImageView android:id="@+id/panel4"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:layout_below="@id/panel2"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel4_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel4"
+            android:layout_alignTop="@id/panel4"
+            android:layout_alignRight="@id/panel4"
+            android:src="@drawable/cocktail"/>
+
+        <Button android:id="@+id/panel4_text"
+            android:layout_width="124dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel4_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel4_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink4"/>
+
+        <TextView android:id="@+id/panel4_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/rightCenterShim"
+            android:layout_below="@id/panel4_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel4_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel4_quantity_metric"
+            android:layout_below="@id/panel4_text"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:text="@string/panel4_default_quantity"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel4_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/rightCenterShim"
+            android:layout_below="@id/panel4_text"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:text="@string/panel4_default_alcohol"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel4_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel4_alcohol"
+            android:layout_below="@id/panel4_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <ImageView android:id="@+id/panel6"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:paddingTop="16dp"
+            android:layout_below="@id/panel4"
+            android:src="@drawable/panel"/>
+
+        <ImageView android:id="@+id/panel6_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="24dp"
+            android:layout_alignLeft="@id/panel6"
+            android:layout_alignTop="@id/panel6"
+            android:layout_alignRight="@id/panel6"
+            android:src="@drawable/add"/>
+
+        <Button android:id="@+id/panel6_text"
+            android:layout_width="138dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/panel6_icon"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:text="@string/panel6_add_drink"
+            android:textAlignment="center"
+            android:onClick="saveDrink6"/>
+
+        <TextView android:id="@+id/panel6_quantity_metric"
+            android:layout_width="20dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/rightCenterShim"
+            android:layout_below="@id/panel6_text"
+            android:text="@string/quantity_metric"
+            android:textColor="#000000"/>
+
+        <EditText android:id="@+id/panel6_quantity"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/panel6_quantity_metric"
+            android:layout_below="@id/panel6_text"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:hint="@string/quantity_hint"/>
+
+        <EditText android:id="@+id/panel6_alcohol"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_toRightOf="@id/rightCenterShim"
+            android:layout_below="@id/panel6_text"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:hint="@string/alcohol_hint"/>
+
+        <TextView android:id="@+id/panel6_alcohol_percent"
+            android:layout_width="12dp"
+            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/panel6_alcohol"
+            android:layout_below="@id/panel6_text"
+            android:text="@string/alcohol_metric"
+            android:textColor="#000000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/panel6">
+
+            <ImageButton android:id="@+id/see_stats_from_add_drink"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/drunk"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

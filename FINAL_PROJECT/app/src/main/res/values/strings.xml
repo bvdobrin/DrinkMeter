@@ -1,0 +1,30 @@
+<resources>
+    <string name="stats_button_text">How Drunk Am I?</string>
+    <string name="settings_button_text">Settings</string>
+    <string name="app_name">Drink Meter</string>
+    <string name="panel1_add_drink">Add Beer</string>
+    <string name="panel2_add_drink">Add Wine</string>
+    <string name="panel3_add_drink">Add Vodka/Gin</string>
+    <string name="panel4_add_drink">Add Cocktail</string>
+    <string name="panel5_add_drink">Add Mona</string>
+    <string name="panel6_add_drink">Add Custom Drink</string>
+    <string name="quantity_metric">ml</string>
+    <string name="alcohol_metric">%</string>
+    <string name="quantity_hint">Qty</string>
+    <string name="alcohol_hint">Alc</string>
+    <string name="panel1_default_quantity">500</string>
+    <string name="panel1_default_alcohol">5.0</string>
+    <string name="panel2_default_quantity">150</string>
+    <string name="panel2_default_alcohol">14.0</string>
+    <string name="panel3_default_quantity">40</string>
+    <string name="panel3_default_alcohol">40.0</string>
+    <string name="panel4_default_quantity">150</string>
+    <string name="panel4_default_alcohol">13.3</string>
+    <string name="panel5_default_quantity">200</string>
+    <string name="panel5_default_alcohol">70.0</string>
+
+    <string name="reset_button">Reset Drink Preferences</string>
+    <string name="weight_hint">ex. 64.5</string>
+    <string name="weight_metric">kg</string>
+    <string name="weight_text">Body weight: </string>
+</resources>
